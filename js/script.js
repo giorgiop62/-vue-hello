@@ -6,6 +6,10 @@ createApp({
     return {
     message:'hello vue',
     coloreTesto: "",
+    img: "fabio.png",
+    path:"./img/"
+
+
   }
 },
 
@@ -13,8 +17,15 @@ createApp({
 methods: {
   cambiaColore(){
     this.coloreTesto = "red"
-  }
+  },
+
+cambiaImg(newImg){
+  this.img = newImg
 }
+
+}
+
+
 
 }).mount('#app')
 
