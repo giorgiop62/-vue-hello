@@ -6,8 +6,9 @@ createApp({
     return {
     message:'hello vue',
     coloreTesto: "",
-    img: "fabio.png",
-    path:"./img/"
+    img: "fabio.jpg",
+    path:"../img/",
+    show:false
 
 
   }
@@ -19,10 +20,13 @@ methods: {
     this.coloreTesto = "red"
   },
 
-cambiaImg(newImg){
+  cambiaImg(newImg){
   this.img = newImg
-}
-
+  },
+  
+  toggle(){
+    this.show = !this.show;
+  }
 }
 
 

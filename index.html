@@ -11,12 +11,18 @@
 <body>
 
   <div id="app">
+    <!--inserisco il testo e al click del bottone cambio colore-->
     <h1 :class="coloreTesto">{{message}}</h1>
-    <button @click="cambiaColore()" >cambia colore</button>
+    <button @click="cambiaColore()" >Cambia colore</button>
 
+    <!--inserisco due img e al clicco del bottone cambio una img -->
     <input type="text" v-model="img">
-    <button @click ="cambiaImg('fabio2.png')">Cambia foto</button>
+    <button @click ="cambiaImg('fabio2.jpg')">Cambia foto</button>
     <img :src="path + img" alt="">
+
+    <p v-if="show">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, commodi?</p>
+
+    <button @click="toggle">cliccami per nascondere la foto e mostrare il testo</button>
 
   
 
